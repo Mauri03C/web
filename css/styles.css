@@ -1,0 +1,87 @@
+/* Paleta pastel */
+:root {
+  --bg-color: #fef6f9;
+  --text-color: #5d5d5d;
+  --accent-color: #a8dadc;
+  --highlight-color: #f9c6d0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffffaa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+img.image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(0.95);
+  transition: transform 0.5s ease;
+}
+
+img.image:hover {
+  transform: scale(1);
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.delay {
+  animation-delay: 0.5s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
