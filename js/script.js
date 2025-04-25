@@ -3,3 +3,4 @@ window.addEventListener('load', () => {
     el.style.animationPlayState = 'running';
   });
 });
+console.log("Mi pagina");
